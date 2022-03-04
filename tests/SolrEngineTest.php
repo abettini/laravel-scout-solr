@@ -8,6 +8,10 @@ use ScoutEngines\Solr\SolrEngine;
 use Solarium\Client;
 use Solarium\QueryType\Update\Query\Query;
 
+/**
+ * @internal
+ * @coversNothing
+ */
 class SolrEngineTest extends TestCase
 {
     public function testUpdateAddsModelsToTheIndex()
@@ -24,7 +28,7 @@ class SolrEngineTest extends TestCase
 
         $engine = new SolrEngine($solrClient);
 
-        $engine->update(Collection::make([new SolrEngineTestModel]));
+        $engine->update(Collection::make([new SolrEngineTestModel()]));
     }
 
     public function testDeleteRemovesUpdatesFromTheIndex()

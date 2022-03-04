@@ -1,5 +1,5 @@
 {
-    "name": "jeroenherczeg/laravel-scout-solr",
+    "name": "abettini/laravel-scout-solr",
     "type": "library",
     "description": "Solr Driver for Laravel Scout",
     "keywords": ["laravel", "scout", "solr"],
@@ -11,15 +11,21 @@
             "email": "jeroen@herczeg.be",
             "homepage": "https://herczeg.be",
             "role": "Developer"
+        },
+        {
+            "name": "Andrea Bettini",
+            "email": "andrea.bettini@jointly.pro",
+            "homepage": "https://bettini.dev",
+            "role": "Developer"
         }
     ],
     "require": {
-        "php": "^7.3",
+        "php": "^7.4|^8.0",
         "laravel/scout": "^8.0",
-        "solarium/solarium": "^4.2"
+        "solarium/solarium": "^6.2"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^2.16",
+        "friendsofphp/php-cs-fixer": "^3.0",
         "phpunit/phpunit": "^9.3"
     },
     "autoload": {
@@ -35,7 +41,7 @@
     "scripts": {
         "test": "phpunit",
         "check-style": "php-cs-fixer fix --diff --dry-run",
-        "fix-style": "php-cs-fixer fix"
+        "fix": "@php vendor/bin/php-cs-fixer fix"
     },
     "extra": {
         "branch-alias": {
