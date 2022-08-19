@@ -218,4 +218,19 @@ class SolrEngine extends Engine
             return \sprintf('%s:"%s"', $key, $value);
         })->values()->all();
     }
+    
+    public function lazyMap(Builder $builder, $results, $model)
+    {
+        throw new \Exception("Not Implemented");
+    }
+
+    public function createIndex($name, array $options = [])
+    {
+        throw new \Exception("Not Implemented");
+    }
+
+    public function deleteIndex($name)
+    {
+        throw new \Exception("Not Implemented");
+    }
 }
